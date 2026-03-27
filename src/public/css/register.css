@@ -1,0 +1,41 @@
+/* 全体レイアウト */
+.register_title {
+    text-align: center;
+    font-size: 32px;
+}
+
+.content {
+
+}
+
+.register_container {
+    text-align: center;
+}
+
+/* 各入力ブロック */
+.register-name,
+.register-email,
+.register-password,
+.register-password-confirm {
+    
+}
+
+/* ラベル（タイトル部分） */
+.register_form-name_title {
+   
+}
+
+/* テキスト入力欄 */
+.register_form-text {
+    /* input の共通スタイル */
+}
+
+/* ボタン */
+.button {
+    /* 登録ボタンのスタイル */
+}
+
+/* 必要ならホバー */
+.button:hover {
+    /* ボタンにカーソルを乗せた時 */
+}

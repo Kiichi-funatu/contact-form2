@@ -1,7 +1,7 @@
 services:
   nginx:
     image: nginx:1.21.1
-    platform: linux/amd64 # mac の場合は有効にすること
+    
     ports:
       - "80:80"
     volumes:
@@ -17,7 +17,7 @@ services:
 
   mysql:
     image: mysql:8.0.26
-    platform: linux/amd64 # mac の場合は有効にすること
+   
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel_db
@@ -25,12 +25,12 @@ services:
       MYSQL_PASSWORD: laravel_pass
     command: mysqld --default-authentication-plugin=mysql_native_password
     volumes:
-      - ./docker/mysql/data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    platform: linux/amd64 # mac の場合は有効にすること
+   
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysql
@@ -40,3 +40,6 @@ services:
       - mysql
     ports:
       - 8080:80
+
+volumes:
+    mysql_data:      

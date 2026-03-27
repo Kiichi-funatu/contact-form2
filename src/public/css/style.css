@@ -1,0 +1,96 @@
+/* 共通 */
+input,
+select,
+textarea {
+    border: 1px solid #E3DED9;
+    color: #8B7969;
+    background-color: #FBFBFB;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* コンテナ */
+.card-container {
+    width: 84%;
+    margin: 32px auto;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #E3DED9;
+    box-shadow: 4px 4px 4px rgba(139, 121, 105, 0.15);
+}
+
+/* タイトル */
+.form-title {
+    font-size: 24px;
+    color: #8B7969;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* フォームグループ */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #8B7969;
+}
+
+/* 名前（姓・名） */
+.name-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-input {
+    background-color: #F4F4F4;
+}
+
+/* ラジオボタン */
+.radio-group {
+    display: flex;
+    gap: 24px;
+    color: #8B7969;
+}
+
+/* セレクトボックス */
+.form-select {
+    background-color: #F4F4F4;
+    min-width: 220px;
+    appearance: none;
+    position: relative;
+}
+
+/* テキストエリア */
+.form-textarea {
+    height: 160px;
+    resize: vertical;
+}
+
+/* エラー表示 */
+.error-text {
+    color: #BA370D;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* ボタン */
+.btn {
+    display: block;
+    margin: 32px auto 0;
+    padding: 12px 24px;
+    width: 200px;
+    background-color: #8B7969;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
