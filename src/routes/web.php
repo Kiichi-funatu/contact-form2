@@ -23,16 +23,10 @@ Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/store', [ContactController::class, 'store']);
 Route::get('/thanks', function() {
     return view('thanks');});
-Route::get('/register', function () {
-    return view('auth.register');
-});
+
 Route::get('/login', function () {
     return view('auth.login');
 });
-
-
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin', function () {
+    return view('admin');
 });
-

@@ -1,5 +1,5 @@
-.header {
-    background: #000;
+/*.header {
+    background: #fff;
 }
 
 .header__inner {
@@ -42,4 +42,104 @@
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+}*/
+
+
+
+
+
+
+/* =========================
+   Base（全体の基本設定）
+========================= */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   Layout（全体レイアウト）
+========================= */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    /*width: 100%;*/
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* =========================
+   Header（ヘッダー）
+========================= */
+.header {
+    display: grid;
+    align-items: center;
+    padding: 16px 0;
+    height: 80px;
+    border: 1px solid #E0DFDE;
+    text-align: center;
+    font-family: serif;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav__link,
+.header-nav__button {
+    color: #fff;
+    font-size: 16px;
+}
+
+.header-nav__button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* =========================
+   Utilities（便利クラス）
+========================= */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
 }

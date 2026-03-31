@@ -1,41 +1,58 @@
-/* 全体レイアウト */
+/* Register Page */
+
 .register_title {
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
-    font-size: 32px;
-}
-
-.content {
-
+    margin-bottom: 25px;
 }
 
 .register_container {
-    text-align: center;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* 各入力ブロック */
-.register-name,
-.register-email,
-.register-password,
-.register-password-confirm {
-    
-}
-
-/* ラベル（タイトル部分） */
 .register_form-name_title {
-   
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-/* テキスト入力欄 */
 .register_form-text {
-    /* input の共通スタイル */
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 18px;
 }
 
-/* ボタン */
+.register_form-text:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
+}
+
 .button {
-    /* 登録ボタンのスタイル */
+    width: 100%;
+    padding: 12px;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* 必要ならホバー */
 .button:hover {
-    /* ボタンにカーソルを乗せた時 */
+    background: #357ab8;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
