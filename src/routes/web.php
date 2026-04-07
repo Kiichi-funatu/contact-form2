@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AuthorController;
 
 
 /*
@@ -27,6 +28,38 @@ Route::get('/thanks', function() {
 Route::get('/login', function () {
     return view('auth.login');
 });
-Route::get('/admin', function () {
-    return view('admin');
-});
+
+Route::get('/admin', [ContactController::class, 'admin']);
+
+Route::get('/admin/export', [ContactController::class, 'export'])->name('admin.export');
+
+
+Route::delete('/delete', [ContactController::class, 'destroy'])->name('delete');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/h', [AuthorController::class, 'index']);
+Route::get('/add', [AuthorController::class, 'add']);
+Route::post('/add', [AuthorController::class, 'create']);
+Route::get('/edit', [AuthorController::class, 'edit']);
+Route::post('/edit', [AuthorController::class, 'update']);
+Route::get('/delete', [AuthorController::class, 'delete']);
+Route::post('/delete/{id}', [AuthorController::class, 'remove']);

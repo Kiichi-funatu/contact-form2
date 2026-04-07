@@ -90,7 +90,7 @@ a {
     border: 1px solid #E0DFDE;
     text-align: center;
     font-family: serif;
-    
+
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
 }

@@ -25,7 +25,7 @@
 
         <div>
             <p class="register_form-name_title">メールアドレス</p>
-            <input class="register_form-text" type="email" name="email" required>
+            <input class="register_form-text" type="email" name="email" value="{{ old('email') }}" required>
             @error('email')
                 <p class="error-message">{{ $message }}</p>
             @enderror

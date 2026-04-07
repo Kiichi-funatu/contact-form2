@@ -18,7 +18,12 @@
 
         <tr class="confirm-form__row">
             <th class="confirm-form__label">性別</th>
-            <td class="confirm-form__data">{{ $inputs['gender'] }}</td>
+            <td class="confirm-form__data">
+                @if($inputs['gender'] == 1)男性
+                @elseif($inputs['gender'] == 2)女性
+                @else($inputs['gender'] == 3)その他
+                @endif
+            </td>
         </tr>
 
         <tr class="confirm-form__row">
@@ -43,7 +48,14 @@
 
         <tr class="confirm-form__row">
             <th class="confirm-form__label">種類</th>
-            <td class="confirm-form__data">{{ $inputs['category_id'] }}</td>
+            <td class="confirm-form__data">
+                @if($inputs['category_id'] == 1)商品のお届けについて
+                @elseif($inputs['category_id'] == 2)商品の交換について
+                @elseif($inputs['category_id'] == 3)商品トラブル
+                @elseif($inputs['category_id'] == 4)ショップへのお問い合わせ
+                @elseif($inputs['category_id'] == 5)その他
+                @endif
+            </td>
         </tr>
 
         <tr class="confirm-form__row">

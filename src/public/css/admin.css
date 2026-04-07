@@ -1,4 +1,101 @@
-input,
+.admin-title {
+    text-align: center;
+    font-weight: 100;
+    font-size: 32px;
+    font-family: serif;
+}
+
+.search-input {
+    border: 1px solid #E3DED9;
+    background-color: #FBFBFB;
+    padding: 8px 12px;
+    min-width: 324px;
+}
+
+.search-select {
+    padding: 8px 12px;
+    height: 100%;
+    background-color: #F4F4F4;
+    border: 1px solid #E3DED9;
+    color: #696969;
+}
+
+.search-date {
+    padding: 8px 12px;
+    height: 100%;
+    background-color: #F4F4F4;
+    border: 1px solid #E3DEC9;
+    color: #696969;
+}
+
+.search-btn {
+    padding: 12px;
+    width: 90px;
+    background-color: #8B7969;
+    color: #FFF;
+}
+
+.reset-btn {
+    padding: 12px;
+    width: 90px;
+    background-color: #D9C6B5;
+    color: #FFF;
+}
+
+.export-btn {}
+
+.pagination-wapper {}
+
+.admin-table {}
+
+.detail-link {}
+
+
+/*  モーダル画面  */
+
+.modal {}
+
+.modal-content {}
+
+.modal-close {}
+
+.modal-title {}
+
+.modal-row {}
+
+
+/*  削除フォーム　　*/
+
+.delete-form {}
+
+.delete-btn {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* input,
 select {
     border: 1px solid #E3DED9;
     color: #8B7969;
@@ -9,7 +106,7 @@ select {
     width: 84%;
 }
 
-/* フォーム */
+ フォーム 
 .search-form {
     display: flex;
     align-items: stretch;
@@ -21,7 +118,7 @@ select {
 .search-form__keyword-input {
     padding: 8px 12px;
     /* placeholderが表示される最低限の幅を最小値とする */
-    min-width: 324px;
+/*min-width: 324px;
     border: 1px solid #E3DED9;
     background-color: #FBFBFB;
 }
@@ -109,7 +206,7 @@ select {
     background-color: #D9C6B5;
 }
 
-/* エクスポートボタン */
+ エクスポートボタン 
 .export-form {
     display: flex;
     align-items: center;
@@ -123,7 +220,7 @@ select {
     font-weight: 400;
 }
 
-/* テーブル */
+ テーブル 
 .admin__table {
     margin-top: 16px;
     width: 100%;
@@ -164,7 +261,7 @@ select {
     text-decoration: none;
 }
 
-/* モーダル */
+ モーダル 
 .modal {
     position: fixed;
     top: 0;
@@ -235,3 +332,50 @@ select {
     text-align: center;
     text-decoration: none;
 }
+
+  モーダルの背景（黒い半透明） 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+ :target で表示 
+.modal:target {
+    display: block;
+}
+
+ モーダル本体（中央に配置） 
+.modal-content {
+    background: #fff;
+    width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+
+    /* 中央に配置するための魔法 */
+/*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+ 閉じるボタン 
+.modal-close {
+    float: right;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+svg.w-5.h-5 {
+    /*paginateメソッドの矢印の大きさ調整のために追加*/
+/*width: 30px;
+    height: 30px;
+  }   */
