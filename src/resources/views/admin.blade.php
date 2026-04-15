@@ -7,7 +7,7 @@
 @section('link')
 <form method="POST" action="/logout">
     @csrf
-    <button class="header__link">ログアウト</button>
+    <button class="header__link">logout</button>
 </form>
 @endsection
 
@@ -15,37 +15,44 @@
 <h2 class="admin-title">Admin</h2>
 <form action="/admin" method="get">
 @csrf
-    <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" class="search-input">
-    <select name="gender" class="search-select">
-        <option value="">性別</option>
-        <option value="1">男性</option>
-        <option value="2">女性</option>
-        <option value="3">その他</option>
-    </select>
-    <select name="category_id" class="search-select">
-        <option value="">お問い合わせの種類</option>
-        @foreach($categories as $category)
-        <option value="{{$category->id}}" @if(request('category_id') == $category->id) selected @endif>{{$category->content}}</option>
-        @endforeach
-    </select>
+    <div class="admin-form">
+        <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" class="search-input">
+        <select name="gender" class="search-select">
+            <option value="">性別</option>
+            <option value="1">男性</option>
+            <option value="2">女性</option>
+            <option value="3">その他</option>
+        </select>
+        <select name="category_id" class="search-select">
+            <option value="">お問い合わせの種類</option>
+            @foreach($categories as $category)
+            <option value="{{$category->id}}" @if(request('category_id') == $category->id) selected @endif>{{$category->content}}</option>
+            @endforeach
+        </select>
 
-    <input type="date" name="date" value="{{ request('date') }}" class="search-date">
-    <button type="submit" class="search-btn">検索</button>
-    <a href="/admin" class="reset-btn">リセット</a>
-    <a href="{{ route('admin.export', request()->query()) }}" class="export-btn">エクスポート</a>
+        <input type="date" name="date" value="{{ request('date') }}" class="search-date">
+        <button type="submit" class="search-btn">検索</button>
+        <a href="/admin" class="reset-btn">リセット</a>
+    </div>
+    
+    
     <div class="pagination-wrapper">
+        <a href="{{ route('admin.export', request()->query()) }}" class="export-btn">エクスポート</a>
         {{ $contacts->appends(request()->query())->links('vendor.pagination.custom') }}
     </div>
     
 </form>
 <table class="admin-table">
-    <tr>
-        <th>お名前</th>
-        <th>性別</th>
-        <th>メールアドレス</th>
-        <th>お問い合わせの種類</th>
-        <th></th>
-    </tr>
+    
+        <tr class="admin-table__title">
+            <th>お名前</th>
+            <th>性別</th>
+            <th>メールアドレス</th>
+            <th>お問い合わせの種類</th>
+            <th></th>
+        </tr>
+    
+    
     @foreach($contacts as $contact)
     <tr>
         <td>{{ $contact->first_name }} {{ $contact->last_name }}</td>
